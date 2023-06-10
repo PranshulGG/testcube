@@ -34,7 +34,8 @@ html {
   height: 100%;
 }
 
-body {
+
+ body {
   font-family: "BungeeFont", sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -43,7 +44,7 @@ body {
   overflow: hidden;
   height: 100%;
   font-size: 5rem;
-}
+} 
 
 .icon {
   display: inline-block;
@@ -238,8 +239,8 @@ body {
   font-size: 1em;
 }
 .text--timer {
-  bottom: 78%;
-  font-size: 3.5em;
+  bottom: 70%;
+  font-size: 2.5em;
   line-height: 1;
 }
 .text--complete, .text--best-time {
@@ -272,13 +273,35 @@ body {
   margin-top: -1.5em;
   border-radius: 100%;
 }
+.btn1 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0;
+  border-width: 0;
+  position: absolute;
+  pointer-events: all;
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.25);
+  opacity: 100%;
+}
+
 .btn--bl {
   bottom: 0.8em;
   left: 0.8em;
 }
+
+
+ .btn--be {
+  bottom: 1000em;
+  left: 6em;
+ 
+} 
 .btn--br {
   bottom: 0.8em;
   right: 0.8em;
+  
 }
 .btn--bc {
   bottom: 0.8em;
@@ -289,6 +312,136 @@ body {
 }
 .btn--cancel {
   display: none !important;
+}
+.btn--ba {
+  background: linear-gradient(-30deg, #be4444 50%, #5c268f 50%);
+  padding: 10px 10px;
+  margin: 12px;
+  position: relative;
+  top: 720px;
+  left: 100px;
+  display: inline-block;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  overflow: hidden;
+  color: #f7d4d4;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.btn--ba::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #ad8585;
+  opacity: 0;
+  -webkit-transition: .2s opacity ease-in-out;
+  transition: .2s opacity ease-in-out;
+}
+
+.btn--ba:hover::before {
+  opacity: 0.2;
+}
+
+.btn--ba span {
+  position: absolute;
+}
+
+.btn--ba span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(43, 26, 8, 0)), to(#3cff00));
+  background: linear-gradient(to left, rgba(43, 26, 8, 0), #3cff00);
+  -webkit-animation: 2s animateTop linear infinite;
+          animation: 2s animateTop linear infinite;
+}
+
+
+@keyframes animateTop {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+.btn--ba span:nth-child(2) {
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 5px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(#3cff00));
+  background: linear-gradient(to top, rgba(43, 8, 8, 0), #3cff00);
+  -webkit-animation: 2s animateRight linear -1s infinite;
+          animation: 2s animateRight linear -1s infinite;
+}
+
+@keyframes animateRight {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+
+.btn--ba span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#3cff00));
+  background: linear-gradient(to right, rgba(43, 8, 8, 0), #3cff00);
+  -webkit-animation: 2s animateBottom linear infinite;
+          animation: 2s animateBottom linear infinite;
+}
+
+@keyframes animateBottom {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.btn--ba span:nth-child(4) {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#3cff00));
+  background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #3cff00);
+  -webkit-animation: 2s animateLeft linear -1s infinite;
+          animation: 2s animateLeft linear -1s infinite;
+}
+
+@keyframes animateLeft {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
 }
 
 .ui {
